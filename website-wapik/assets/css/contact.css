@@ -1,0 +1,107 @@
+#banner {
+  margin-top: 0;
+  padding: 0;
+}
+
+#header .holder {
+  border-bottom: none;
+}
+
+#get-touch textarea {
+  resize: none;
+}
+
+#get-touch .form-group input,
+#get-touch .form-group textarea {
+  border-radius: 0;
+  border: 1px solid #c1d3d2;
+  box-shadow: 0 0 0 0.9px rgba(145, 143, 143, 0.12);
+}
+
+#get-touch .form-group input {
+  height: 46px;
+}
+
+#get-touch .form-group input:focus,
+#get-touch .form-group textarea:focus {
+  box-shadow: 0 0 0 0.9px rgba(9, 172, 30, 0.315);
+}
+
+#get-touch .form-group input::placeholder,
+#get-touch .form-group textarea::placeholder {
+  font-size: 14px;
+  color: #83a7a5;
+  font-weight: 600;
+}
+
+#get-touch .form-group input::-webkit-input-placeholder,
+#get-touch .form-group textarea::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #83a7a5;
+  font-weight: 600;
+}
+
+#get-touch .form-group input:-ms-input-placeholder,
+#get-touch .form-group textarea:-ms-input-placeholder {
+  font-size: 14px;
+  color: #83a7a5;
+  font-weight: 600;
+}
+
+#get-touch .form-group input:-moz-placeholder,
+#get-touch .form-group textarea:-moz-placeholder {
+  font-size: 14px;
+  color: #83a7a5;
+  font-weight: 600;
+}
+
+#get-touch .main-button {
+  background-color: #6fb048;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+#get-touch-address {
+  border: 2px dashed #c1d3d2;
+  padding: 38px 40px 55px;
+}
+
+#get-touch-address .general-heading {
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+#get-touch-address .contact-mail::before {
+  content: url("../img/contact-us/mail-icon-green.png");
+  margin-right: 9px;
+}
+
+#get-touch-address .contact-tel::before {
+  content: url("../img/contact-us/phone-icon-green.png");
+  margin-right: 9px;
+}
+
+#get-touch-address .contact-address::before {
+  content: url("../img/contact-us/map-icon-green.png");
+  margin-right: 9px;
+  position: absolute;
+  display: block;
+  left: -23px;
+}
+
+.map-wrap img {
+  object-fit: cover;
+  width: 100%;
+  min-height: 400px;
+}
+
+@media (min-width: 768px) {
+  .holder {
+    padding: 35px 0;
+  }
+
+  #get-touch .main-button {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,77 @@
+#banner .banner-content {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#banner .banner-content h1 {
+  font-size: 35px;
+  font-family: "montserratregular", sans-serif;
+}
+
+#banner {
+  background: url(../img/about-us/banner-about-us.png) 0 0 no-repeat;
+  background-size: cover;
+}
+
+#banner::after {
+  background-color: rgba(45, 111, 113, 0.6);
+}
+
+#download::after {
+  background-color: rgba(111, 176, 72, 0.9);
+}
+
+#download .download-btn-wrap .main-button {
+  background-color: #49732f;
+}
+
+#download .general-heading {
+  color: #ffffff;
+}
+
+#download .download-text {
+  color: #ffffff;
+}
+
+#team {
+  background-color: #eef1ec;
+}
+
+#team .card-deck-custom {
+  padding: 30px 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#team .card-deck-custom .general-heading {
+  font-size: 15px;
+  font-family: "robotoblack", sans-serif;
+  margin-bottom: 5px;
+}
+
+#team .card-text-custom {
+  font-size: 14px;
+}
+
+#team .card-custom {
+  background-color: transparent;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  #banner .banner-content {
+    max-width: 900px;
+  }
+
+  #banner .banner-content h1 {
+    font-size: 50px;
+  }
+
+  .heading-wrap {
+    max-width: 700px;
+  }
+
+  #team .card-deck-custom {
+    padding: 50px 0;
+  }
+}
