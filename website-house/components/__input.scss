@@ -1,0 +1,11 @@
+input, textarea {
+    border-radius: 0;
+    font-size: 12px;
+    color: $color-placeholder;
+  }
+
+.form-control:focus {
+  box-shadow: 0 0 2px 1px $color-hover;
+  outline: none;
+  border-color: $color-main;
+}

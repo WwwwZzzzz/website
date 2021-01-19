@@ -1,0 +1,429 @@
+@import "../components/__font-face.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400;1,500&display=swap");
+
+$color-white: #fff;
+$color-black: #000;
+$color-blue-dark: #000415;
+$color-grey: #f6f6f6;
+$color-placeholder: #c7c7c7;
+$color-main: #f26522;
+$color-hover: #fb9411;
+$color-border-card: #cceefd;
+$color-copyright-bg: #1e1e1e;
+$color-text: #333;
+$color-text-form: #d9d9d9;
+
+body {
+  min-width: 320px;
+  background-color: $color-white;
+  margin: 0;
+  color: $color-text;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+.header {
+  position: relative;
+  padding: 20px 0 20px;
+
+  img {
+    width: 250px;
+  }
+
+  .nav {
+    position: absolute;
+    top: -100%;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .nav-link {
+    color: $color-text;
+    transition: 0.3s ease-in-out;
+    font-size: 16px;
+  }
+
+  .nav-link:hover {
+    color: $color-hover;
+  }
+
+  &.is-active .nav {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-opener {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 9;
+  }
+
+  .nav-opener span {
+    width: 40px;
+    height: 2px;
+    background-color: $color-black;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  .nav-opener::after {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: $color-black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .nav-opener::before {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: $color-black;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @media (min-width: 768px) {
+    .nav {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.banner {
+  background-color: $color-main;
+  color: $color-white;
+  padding: 50px 0 50px;
+  background-image: url("../img/house-6.png"), url("../img/house-1.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom left 10px, bottom right;
+  background-size: 30%, 35%;
+
+  @import "../components/__form.scss";
+
+  @media (max-width: 768px) {
+    & {
+      background-image: none, url("../img/house-1.png");
+      background-size: 30%, 45%;
+    }
+  }
+}
+
+.features {
+  padding: 50px 0 50px;
+
+  @import "../components/__card.scss";
+
+  .features-icon {
+    width: 100px;
+    height: 100px;
+    color: $color-main;
+    font-size: 50px;
+    box-shadow: 0 0 10px 0 $color-border-card;
+    border-radius: 50%;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .features-icon {
+    margin-top: 20px;
+  }
+
+  @media (min-width: 768px) {
+    & {
+      padding: 100px 0 100px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .card {
+      padding: 0;
+    }
+  }
+}
+
+.steps {
+  background-color: $color-grey;
+  padding: 50px 0 250px;
+  position: relative;
+  background-image: url("../img/house-2.png");
+  background-repeat: no-repeat;
+  background-position: bottom left 10px;
+  background-size: 25%;
+
+  @import "../components/__card.scss";
+
+  .card-title {
+    padding: 20px 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-body {
+    padding-top: 0;
+  }
+
+  h5 > span:first-child {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .video {
+    position: absolute;
+    bottom: 8%;
+    z-index: 2;
+  }
+
+  img {
+    position: absolute;
+    width: 25%;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  @media (min-width: 768px) {
+    & {
+      padding: 100px 0 300px;
+    }
+
+    .video {
+      width: 900px;
+      bottom: -20%;
+    }
+
+    img {
+      bottom: -65px;
+      width: 28%;
+    }
+  }
+
+  @media (min-width: 768px) and  (max-width: 1024px) {
+
+    .steps .card {
+      padding: 0;
+    }
+
+  .embed-responsive {
+    width: 750px;
+  }
+  }
+}
+
+.housecart {
+  padding: 50px 0 50px;
+
+  .card {
+    background-color: $color-main;
+    color: $color-white;
+    border-radius: 0;
+    border-color: $color-white;
+  }
+
+  .list-group-item {
+    background-color: $color-main;
+    border-color: $color-white;
+    min-height: 65px;
+  }
+
+  .card-title {
+    padding: 10px 20px;
+    min-height: 65px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .card-deck .card:nth-child(2) ul li:before,
+  .card-deck .card:nth-child(3) ul li:before {
+    font-family: "icomoon";
+    content: "\ea11";
+    font-size: 15px;
+    border: 1px solid #f26522;
+    border-radius: 50%;
+    padding: 7px 7px;
+    color: #f26522;
+    background-color: #fff;
+    margin-right: 10px;
+  }
+
+  @media (min-width: 768px) {
+    & {
+      padding: 300px 0 300px;
+    }
+  }
+}
+
+.subscribe {
+  background-color: $color-main;
+  color: $color-white;
+  padding: 50px 0 50px;
+  background-image: url("../img/house-4.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 30%;
+
+  @import "../components/__form.scss";
+
+  @media (max-width: 768px) {
+    & {
+      background-image: url("../img/house-4.png");
+    }
+  }
+}
+
+.footer {
+  .footer-form {
+    position: relative;
+    padding: 50px 0 100px;
+  }
+
+  img {
+    width: 100%;
+    position: absolute;
+    bottom: -5px;
+    left: -10px;
+    z-index: 2;
+  }
+
+  h2 {
+    color: $color-main;
+  }
+
+  @import "../components/__input.scss";
+  @import "../components/__btn.scss";
+
+  .border {
+    border-color: transparent;
+    box-shadow: 0 0 20px 0 $color-border-card;
+  }
+
+  .copyright {
+    background-color: $color-copyright-bg;
+    color: $color-white;
+    text-align: center;
+    padding-top: 16px;
+    z-index: 1;
+  }
+
+  @media (min-width: 768px) {
+    .footer-form {
+      padding: 50px 0;
+    }
+
+    img {
+      width: 40%;
+    }
+  }
+}
+
+.steps-how-it-works {
+  padding-bottom: 50px;
+
+  @import "../components/__card.scss";
+
+  .embed-responsive {
+    padding: 50px 0;
+  }
+
+  .card-body {
+    padding: 0;
+  }
+
+  .card {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .card-title {
+    margin-bottom: 2px;
+  }
+
+  h5 {
+    font-size: 15px;
+  }
+
+  .step-count {
+    box-shadow: 0 0 10px 0 $color-border-card;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    color: $color-main;
+  }
+
+  @media (min-width: 768px) {
+    & {
+      padding: 100px 0 100px;
+    }
+
+    .embed-responsive {
+      width: 100%;
+      height: 120%;
+      position: relative;
+      top: -45px;
+    }
+  }
+}
+
+.features-how-it-works {
+  padding: 50px 0 0px;
+}
+
+.housecart-how-it-works {
+  & {
+    @extend .housecart;
+    padding: 0 0 50px;
+  }
+
+  .card {
+    background-color: $color-white;
+    color: $color-main;
+  }
+
+  .card-title {
+    border-bottom: 1px solid $color-main;
+  }
+
+  .list-group-item {
+    background-color: $color-white;
+    color: $color-text;
+    border-color: $color-text-form;
+  }
+
+  .list-group-item::before {
+    content: "\ea11";
+    display: none;
+  }
+
+  .card {
+    box-shadow: 0 0 10px 0 $color-border-card;
+  }
+
+  @media (min-width: 768px) {
+    & {
+      padding: 100px 0 100px;
+    }
+  }
+}

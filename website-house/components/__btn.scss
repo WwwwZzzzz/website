@@ -1,0 +1,11 @@
+.btn {
+    background-color: $color-main;
+    color: $color-white;
+    transition: 0.3s ease-in-out;
+    border-radius: 0;
+    border: 0px solid;
+  }
+
+  .btn:hover {
+    background-color: $color-hover;
+  }

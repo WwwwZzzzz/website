@@ -1,0 +1,50 @@
+.form {
+  border: 15px solid rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  background-color: $color-main;
+  color: $color-white;
+  transition: 0.3s ease-in-out;
+  font-size: 14px;
+  width: 150px;
+}
+
+.btn:hover {
+  background-color: $color-hover;
+}
+
+.btn,
+.form-control {
+  border-radius: 0;
+  border: 0px solid;
+}
+
+.form-control-lg:focus {
+  box-shadow: 0 0 2px 1px $color-hover;
+  outline: none;
+}
+
+input[type="email"]::placeholder {
+color: $color-text-form;
+font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  & {
+    padding: 200px 0 200px;
+  }
+}
+
+@media (max-width: 768px) {
+.input-group,
+.input-group-append,
+.btn {
+  width: 100%;
+}
+
+.form-control-lg {
+  font-size: 15px;
+  text-align: center;
+}
+}

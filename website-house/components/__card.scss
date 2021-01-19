@@ -1,0 +1,39 @@
+.card {
+    padding: 20px;
+}
+
+h2 {
+    padding-bottom: 5px;
+  }
+
+  .underline p {
+    border-bottom: 1px solid $color-grey;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .underline p:before {
+    content: "";
+    background: none;
+    border-bottom: 5px solid $color-main;
+    display: block;
+    position: absolute;
+    left: calc(30% - 5px);
+    top: calc(50% - 2px);
+    pointer-events: none;
+    width: 100px;
+  }
+
+  .card-title {
+    color: $color-main;
+  }
+
+  .card {
+    border-radius: 0;
+    border-color: transparent;
+    box-shadow: 0 0 20px 0 $color-border-card;
+  }
+
+  .card-deck {
+    padding: 20px;
+  }
