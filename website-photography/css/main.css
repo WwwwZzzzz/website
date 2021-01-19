@@ -1,0 +1,194 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?3nbb21");
+  src: url("../fonts/icomoon.eot?3nbb21#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?3nbb21") format("truetype"), url("../fonts/icomoon.woff?3nbb21") format("woff"), url("../fonts/icomoon.svg?3nbb21#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; }
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-home:before {
+  content: "\e900"; }
+
+.icon-phone:before {
+  content: "\e942"; }
+
+body {
+  background-color: #fff;
+  min-width: 320px; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none; }
+
+a:hover {
+  color: #b3278d; }
+
+a:hover {
+  text-decoration: none; }
+
+.header {
+  background-color: #fff;
+  position: relative;
+  z-index: 99999;
+  padding: 35px; }
+  .header .nav {
+    position: absolute;
+    top: -100%;
+    opacity: 0;
+    visibility: hidden; }
+  .header.is-active .nav {
+    top: 0;
+    opacity: 1;
+    visibility: visible; }
+  .header .nav-opener {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 9; }
+  .header .nav-opener span {
+    width: 40px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%); }
+  .header .nav-opener::after {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+  .header .nav-opener::before {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  @media (min-width: 768px) {
+    .header .nav {
+      position: static;
+      opacity: 1;
+      visibility: visible; } }
+
+.banner {
+  position: relative; }
+  .banner img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    filter: brightness(30%); }
+    @media (max-width: 768px) {
+      .banner img {
+        height: 400px;
+        object-fit: cover; } }
+  .banner .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    color: #000;
+    padding: 12px 40px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 5px 5px 1px #0030ff; }
+  .banner .btn:hover {
+    background-color: #000;
+    color: #fff; }
+  .banner h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; }
+  @media (max-width: 768px) {
+    .banner h1 {
+      top: 40%;
+      font-size: 30px; }
+    .banner .btn {
+      top: 70%; } }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .banner h1 {
+      text-align: center;
+      top: 40%; } }
+  @media (min-width: 1024px) and (max-width: 1366px) {
+    .banner h1 {
+      top: 29%; } }
+
+.about .btn {
+  padding: 12px 40px;
+  background-color: #0030ff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 5px 5px 1px #0030ff;
+  color: #fff;
+  width: 180px; }
+
+.about .btn:hover {
+  background-color: #000; }
+
+.about img {
+  box-shadow: 10px 10px 1px #b3278d;
+  object-fit: cover; }
+
+@media (min-width: 768px) {
+  .portfolio .portfolio-text {
+    padding: 0 200px; } }
+
+@media (max-width: 768px) {
+  .portfolio .portfolio-text h2,
+  .portfolio p {
+    text-align: left; } }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .portfolio .portfolio-text {
+    padding: 0 100px; }
+  .portfolio .portfolio-text h2,
+  .portfolio p {
+    text-align: center; } }
+
+.footer {
+  background-color: #000415;
+  color: #fff; }
+  .footer .footer-copyright {
+    color: #818181; }
+  .footer .sub {
+    padding: 12px;
+    width: 32%;
+    height: 150px;
+    display: table-cell;
+    border-right: 1px solid #818181; }
+  .footer span {
+    font-size: 20px;
+    padding: 5px 15px 0 0; }
+  @media (max-width: 768px) {
+    .footer .sub {
+      border: none; } }
+  @media (min-width: 768px) {
+    .footer {
+      padding-top: 100px; }
+    .footer .logo {
+      padding-right: 100px; }
+    .footer .adress {
+      padding-left: 100px; } }

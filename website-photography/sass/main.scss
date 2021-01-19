@@ -1,0 +1,284 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?3nbb21");
+  src: url("../fonts/icomoon.eot?3nbb21#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?3nbb21") format("truetype"),
+    url("../fonts/icomoon.woff?3nbb21") format("woff"),
+    url("../fonts/icomoon.svg?3nbb21#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+  content: "\e900";
+}
+.icon-phone:before {
+  content: "\e942";
+}
+
+$color-white: #fff;
+$color-black: #000;
+$color-blue: #0030ff;
+$color-pink: #b3278d;
+$color-blue-dark: #000415;
+$color-grey: #818181;
+
+$box-shadow-blue: 5px 5px 1px;
+$box-shadow-pink: 10px 10px 1px;
+$btn-size: 12px 40px;
+
+body {
+  background-color: $color-white;
+  min-width: 320px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+a:hover {
+  color: $color-pink;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.header {
+  background-color: $color-white;
+  position: relative;
+  z-index: 99999;
+  padding: 35px;
+
+  & .nav {
+    position: absolute;
+    top: -100%;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &.is-active .nav {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  & .nav-opener {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 9;
+  }
+
+  & .nav-opener span {
+    width: 40px;
+    height: 2px;
+    background-color: $color-black;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  & .nav-opener::after {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: $color-black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  & .nav-opener::before {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: $color-black;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @media (min-width: 768px) {
+    & .nav {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.banner {
+  position: relative;
+
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    filter: brightness(30%);
+
+    @media (max-width: 768px) {
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+
+  .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-white;
+    color: $color-black;
+    padding: $btn-size;
+    border: none;
+    cursor: pointer;
+    box-shadow: $box-shadow-blue $color-blue;
+  }
+
+  & .btn:hover {
+    background-color: $color-black;
+    color: $color-white;
+  }
+
+  h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color-white;
+  }
+
+  @media (max-width: 768px) {
+    & h1 {
+      top: 40%;
+      font-size: 30px;
+    }
+
+    & .btn {
+      top: 70%;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+      text-align: center;
+      top: 40%;
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1366px) {
+    & h1 {
+      top: 29%;
+    }
+  }
+}
+
+.about {
+  & .btn {
+    padding: $btn-size;
+    background-color: $color-blue;
+    border: none;
+    cursor: pointer;
+    box-shadow: $box-shadow-blue $color-blue;
+    color: $color-white;
+    width: 180px;
+  }
+
+  & .btn:hover {
+    background-color: $color-black;
+  }
+
+  img {
+    box-shadow: $box-shadow-pink $color-pink;
+    object-fit: cover;
+  }
+}
+
+.portfolio {
+  @media (min-width: 768px) {
+    .portfolio-text {
+      padding: 0 200px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .portfolio-text h2,
+    p {
+      text-align: left;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    & .portfolio-text {
+      padding: 0 100px;
+    }
+    .portfolio-text h2,
+    p {
+      text-align: center;
+    }
+  }
+}
+
+.footer {
+  background-color: $color-blue-dark;
+  color: $color-white;
+
+  & .footer-copyright {
+    color: $color-grey;
+  }
+
+  & .sub {
+    padding: 12px;
+    width: 32%;
+    height: 150px;
+    display: table-cell;
+    border-right: 1px solid $color-grey;
+  }
+
+  & span {
+    font-size: 20px;
+    padding: 5px 15px 0 0;
+  }
+
+  @media (max-width: 768px) {
+    & .sub {
+      border: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    & {
+      padding-top: 100px;
+    }
+
+    .logo {
+      padding-right: 100px;
+    }
+
+    .adress {
+      padding-left: 100px;
+    }
+  }
+}
